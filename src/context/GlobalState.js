@@ -14,9 +14,9 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, IntialState, () => {
     // Creates Array in Local Storage (text & amount)
     const localData = localStorage.getItem("state");
-    return localData ? JSON.parse(localData) : [];
+    return localData ? JSON.parse(localData) : IntialState;
   });
-  
+
   // Will detect a transaction and load its
   useEffect(() => {
     localStorage.setItem("state", JSON.stringify(state));
