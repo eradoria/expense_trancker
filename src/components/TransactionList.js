@@ -5,6 +5,15 @@ import { Transaction } from "./Transaction";
 export const TransactionList = () => {
   const { transactions } = useContext(GlobalContext);
 
+  // useEffect(() => {
+  //   const transactions = localStorage.getItem("text", 0);
+
+  //   if (transactions) {
+  //     setText(JSON.parse("text"));
+  //     setAmount(JSON.parse(0));
+  //   }
+  // }, []);
+
   return (
     <>
       <h3>History</h3>
